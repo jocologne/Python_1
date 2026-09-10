@@ -16,7 +16,7 @@ def slice_me(family: list, start: int, end: int) -> list:
         arr = np.array(family)
         print(f"My shape is : {arr.shape}")
         sliced = arr[start:end]
-        print(f"My new shape is : {np.array(family)[start:end].shape}")
+        print(f"My new shape is : {sliced.shape}")
         return sliced.tolist()
     except (AssertionError, TypeError, IndexError) as error:
         print("Error:", error)
