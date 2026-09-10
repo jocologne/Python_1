@@ -20,4 +20,4 @@ def slice_me(family: list, start: int, end: int) -> list:
         return sliced.tolist()
     except (AssertionError, TypeError, IndexError) as error:
         print("Error:", error)
-        return[]
+        return []
