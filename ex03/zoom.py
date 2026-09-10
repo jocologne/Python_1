@@ -10,11 +10,12 @@ def main():
         print(img)
         h = img.shape[0]
         w = img.shape[1]
-        zoomed = img[h // 4: h // 4 + 400, w // 4: w // 4 + 400]
-        print(f"New shape after slicing: {zoomed.shape}")
+        zoomed = img[h // 4: h // 4 + 400, w // 4: w // 4 + 400, 0:1]
+        squeezed_shape = zoomed.squeeze().shape
+        print(f"New shape after slicing: {zoomed.shape} or {squeezed_shape}")
+        print(zoomed)
         plt.imshow(zoomed.squeeze())
         plt.savefig("zoomed.png")
-        print(np.array(zoomed))
     except Exception as error:
         print(f"Error: {error}")
 
