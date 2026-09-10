@@ -6,7 +6,7 @@ from PIL import Image
 def ft_load(path: str) -> list:
     """Load image from path and return as an array"""
     try:
-        if not path.lower().endswith(("jpg", "jpeg")):
+        if not path.lower().endswith((".jpg", ".jpeg")):
             raise AssertionError("Supported formats are JPG and JPEG")
         if not os.path.exists(path):
             raise AssertionError(f"File not found: {path}")
