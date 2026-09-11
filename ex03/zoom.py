@@ -1,10 +1,9 @@
 from load_image import ft_load
 import matplotlib.pyplot as plt
-import numpy as np
 
 
 def main():
-    """Display info and zoom in image"""
+    """Display info and transpose image"""
     try:
         img = ft_load("animal.jpeg")
         print(img)
